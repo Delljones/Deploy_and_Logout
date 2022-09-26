@@ -2,9 +2,6 @@
 
 A React App - That has functionality to login and log out using firestore and also a deployed project
 
-Logs:              https://app.netlify.com/sites/sit313-deply-app/deploys/6331ba00ced81b006489a728 
 
-Unique Deploy URL: https://6331ba00ced81b006489a728--sit313-deply-app.netlify.app 
-
-Website URL:       https://sit313-deply-app.netlify.app 
+Website URL:       https://6331b9bc7e418f00bef0b5ab--sit313-deply-app.netlify.app/login
 
