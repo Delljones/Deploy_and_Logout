@@ -1,0 +1,53 @@
+.App {
+    margin: 30px;
+    display: block;
+    text-align: center;
+    color: #874d4d;
+}
+
+h1 {
+    border: 1px black solid;
+    background-color: #f7cfcf;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 30pt;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.radio {
+    background-color: #f1e2e2;
+    border: 1px black solid;
+    border-radius: 20px;
+    padding: 10pt;
+    font-size: 18pt;
+    color: #bc4304;
+
+}
+
+.question {
+    color: red;
+    font-size: 100pt;
+}
+
+.article {
+
+    margin-left: 4%;
+}
+
+.select {
+    font-weight: bold;
+    font-size: 20pt;
+    margin-right: 20pt;
+}
+
+
+
+
+
+
+
+
+
+
+
+

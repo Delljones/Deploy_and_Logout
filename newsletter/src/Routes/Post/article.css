@@ -1,0 +1,63 @@
+.forms {
+    background-color:#f1e2e2;
+    border: 1px black solid;
+    border-radius: 20px;
+    padding: 20pt;
+    font-size: 20pt; 
+    color: 	#bc4304; 
+    text-align: left;
+    font-weight: bold;
+}
+
+.initial {
+    background-color:#f1e2e2;
+    border: 1px black solid;
+    border-radius: 20px;
+    padding: 20pt;
+    margin-top: 30px;
+    padding-bottom: 20cm;
+}
+
+.label {
+    margin-left: 10px;
+}
+
+.input{ 
+    border-radius: 25px;
+    padding: 10px;
+    width: 96%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.inputAbstract{ 
+    border-radius: 25px;
+    padding: 10px;
+    padding-bottom: 90px;
+    width: 96%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.inputProblem {
+    border-radius: 25px;
+    padding: 10px;
+    padding-bottom: 300px;
+    width: 96%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+button {
+    display: block;
+    margin-left: auto;
+    margin-right: 30px;
+    border-radius: 25px;
+    height: 1cm;
+    width: 4cm;
+}
+
+
+
+
+
