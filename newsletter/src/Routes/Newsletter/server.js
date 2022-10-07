@@ -23,14 +23,6 @@ app.post("/", (req, res) => {
 // app.use(bodyParser.urlencoded({extended:true}))
 // app.use(bodyParser.json())
 
-// Using the HTML for the form submission
-//
-// app.get("/", (req, res) => {
-//     res.send("__dirname + \"/index.html\">");
-// });
-//
-//
-
 // // Using the HTML for the form submission
 // app.get("/", (req, res) => {
 //     res.sendFile(__dirname + "/index.html");

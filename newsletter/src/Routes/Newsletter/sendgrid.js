@@ -1,19 +1,24 @@
 // +---- SENDGRID -----+
 // Using npm install --save @sendgrid/mail
+console.log("running sendgrid.js")
 
-const sgMail = require('@sendgrid/mail')
-sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+// Setting up the API Key
+const SendGridMail = require("@sendgrid/mail")
+SendGridMail.setApiKey('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');
+
+// Message Object
 const msg = {
-    to: 'test@example.com', // Change to your recipient
-    from: 'test@example.com', // Change to your verified sender
-    subject: 'Thank For Subscribing',
-    text: 'Dev@Deakin.edu.au',
-    html: '<strong>Thanks for Subscribing</strong>',
+    to: 'dell_jones@outlook.com', // Change to your recipient
+    from: 'rmannekejones@deakin.edu.au', // Change to your verified sender
+    subject: 'Send Grid Email',
+    text: 'Thanks for subscribing to Dev@Deakin.edu.au',
+    html: '<h1><strong>Thanks for Subscribing!</strong> Hope you have a fantastic day</h1>',
+
 }
-sgMail
+SendGridMail
     .send(msg)
     .then(() => {
-        console.log('Email sent')
+        console.log('Email sent to')
     })
     .catch((error) => {
         console.error(error)
