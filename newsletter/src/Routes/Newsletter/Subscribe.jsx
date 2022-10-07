@@ -1,5 +1,25 @@
 import React, {useState} from 'react';
-import './sendgrid'
+// Setting up the API Key
+const SendGridMail = require("@sendgrid/mail")
+SendGridMail.setApiKey(process.env.SENDGRID_API_KEY);
+
+// Message Object
+const msg = {
+    to: 'dell_jones@outlook.com', // Change to your recipient
+    from: 'rmannekejones@deakin.edu.au', // Change to your verified sender
+    subject: 'Send Grid Email',
+    text: 'Thanks for subscribing to Dev@Deakin.edu.au',
+    html: '<h1><strong>Thanks for Subscribing!</strong> Hope you have a fantastic day</h1>',
+}
+SendGridMail
+    .send(msg)
+    .then(() => {
+        console.log('Email sent to')
+    })
+    .catch((error) => {
+        console.error(error)
+    })
+
 
 function Subscribe() {
     // Handles the data inputted into the form
