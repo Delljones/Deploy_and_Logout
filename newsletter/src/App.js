@@ -9,7 +9,7 @@ import Profile from "./Routes/Authentication/Profile";
 import LoggedOut from "./Routes/Authentication/LoggedOut";
 import './App.css'
 import Home from "./Routes/Home/Home";
-import Newsletter from "./Routes/Newsletter/Newsletter";
+import Subscribe from "./Routes/Newsletter/Subscribe";
 
 // main Application - Used for the routing of the project
 function App() {
@@ -24,7 +24,7 @@ function App() {
                     <Route path="/signup" element={<Signup/>}></Route>
                     <Route path="/post" element={<Post/>}></Route>
                     <Route path="/profile" element={<Profile/>}></Route>
-                    <Route path="/newsletter" element={<Newsletter/>}></Route>
+                    <Route path="/subscribe" element={<Subscribe/>}></Route>
                 </Routes>
                <Footer/>
             </div>

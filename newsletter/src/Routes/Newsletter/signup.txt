@@ -1,0 +1,17 @@
+
+{/* <div className="newsletter">*!/*/}
+{/*          <h1> This Is Our Newsletter </h1>*!/*/}
+{/*            <form>*!/*/}
+{/*              <label> SIGN UP FOR OUR DAILY INSIDER! <label/> <br></br>*!/*/}
+{/*                 <br></br>*!/*/}
+{/*                     <input name="Fname" placeholder="Enter First Name" required="required"*!/*/}
+{/*                             onChange={handleFname}/> <br></br>*/}
+{/*                        <input name="Lname" placeholder="Enter Last Name" required="required"*/}
+{/*//                    onChange={handleLname}/> <br></br>*/}
+{/*//             <input name="email" placeholder="Enter Email" required="required" onChange={handlemEmail}/>*/}
+{/*//             <button class="newsletterButton" type="submit" onSubmit={handleClick}>Submit</button>*/}
+{/*//             <br></br>*/}
+{/*//             <h1>Thanks for Signing Up</h1>*/}
+{/*//         </label>*/}
+{/*//     </form>*/}
+{/*// </div>*/

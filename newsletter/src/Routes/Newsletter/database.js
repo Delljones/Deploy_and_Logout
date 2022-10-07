@@ -18,41 +18,43 @@ const https = require("https") // need to import the https module
 const mailchimp = require("@mailchimp/mailchimp_marketing");
 
 app.use(express.static("public"))
-app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyParser.urlencoded({extended: true}));
 
-app.get("/", (req, res)=>{
-    res.sendFile(__dirname+"/index.html")
+app.get("/", (req, res) => {
+    res.sendFile(__dirname + "/index.html")
 });
 
-app.post("/", (req, res)=> {
-    var apikey ='5c1997b17eab965714be14f9ea6a1a63'
-    var listid = '99bff476d8'
-    var server = '13'
+app.post("/", (req, res) => {
+    const apikey = '5c1997b17eab965714be14f9ea6a1a63';
+    const listid = '99bff476d8';
+    const server = '13';
 
-    var fname = req.body.first_name
-    var lname = req.body.last_name
-    var email = req.body.email
+    const mEmail = req.body.mEmail;
+    const fName = req.body.fname;
+    const lName = req.body.lname;
 
-    const url= "https://api.mailchimp.com/3.0/lists/{99bff476d8}"
+    const url = "https://api.mailchimp.com/3.0/lists/{99bff476d8}"
 
     const options = {
         method: "POST",
-        auth:"sit313: 5c1997b17eab965714be14f9ea6a1a63"
+        auth: "sit313: 5c1997b17eab965714be14f9ea6a1a63"
     }
 
     const data = {
-
-        members :[
-            {   email_address: email,
+        members: [
+            {
+                email_address: email,
                 status: "subscribed",
                 merge_fields: {
-                    FNAME: fname,
-                    LANME: lname
-                }  } ] }
+                    fName: fName,
+                    lName: lName
+                }
+            }]
+    }
 
-    var jsonData = JSON.stringify(data)
-    const request = https.request(url, options, (response)=>{
-        response.on("data", (data)=>{
+    const jsonData = JSON.stringify(data);
+    const request = https.request(url, options, (response) => {
+        response.on("data", (data) => {
             console.log(JSON.parse(data))
         })
     })
@@ -60,6 +62,6 @@ app.post("/", (req, res)=> {
     request.end()
 })
 
-app.listen(8080, function(){
-    console.log("Server is running on 8080");
+app.listen(8000, function () {
+    console.log("Server is running on 8000");
 })

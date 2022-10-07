@@ -16,8 +16,8 @@ function Searchbar() {
                     <Link to="/" class="searchbutton" type="submit">Home</Link>
                     <Link to='/post' class="searchbutton" type="submit">Post</Link>
                     <Link to="/login" class="searchbutton" type="submit">Log In</Link>
-                    <Link to="/loggedout" class="searchbutton" type="submit">Logout</Link>
-                    <Link to="/newsletter" class="searchbutton" type="submit">Contact</Link>
+                    <Link to="/loggedout" class="searchbutton" type="submit">Log Out</Link>
+                    <Link to="/subscribe" class="searchbutton" type="submit">Subscribe</Link>
                 </form>
             </div>
         </div>

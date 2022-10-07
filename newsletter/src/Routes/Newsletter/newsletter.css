@@ -1,0 +1,19 @@
+.newsletter {
+    display: grid;
+    position: center;
+    align-items: center;
+    align-content: center;
+}
+
+input {
+    margin-bottom: 0.5cm;
+    margin-top: 1cm;
+    width: 12cm;
+}
+
+.newsletterButton {
+    position: center;
+    background-color: #874d4d;
+    margin-top: 1cm;
+
+}
