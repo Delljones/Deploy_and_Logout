@@ -10,5 +10,4 @@ function Loggedin() {
         </div>
     )
 }
-
 export default Loggedin

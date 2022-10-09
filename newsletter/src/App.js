@@ -7,7 +7,7 @@ import React from "react";
 import Footer from './Routes/Footer/Footer';
 import Profile from "./Routes/Authentication/Profile";
 import LoggedOut from "./Routes/Authentication/LoggedOut";
-import './App.css'
+
 import Home from "./Routes/Home/Home";
 import Subscribe from "./Routes/Newsletter/Subscribe";
 

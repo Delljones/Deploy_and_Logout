@@ -1,40 +1,53 @@
 const express = require("express")
 const bodyParser = require("body-parser")
-const https = require("https")
+const {request} = require("https");
+const server = express()
+server.use(bodyParser.urlencoded({extended: true}))
+server.use(express.static("public"))
+server.get("/", (req, res) => {
+   const user = {
+       SgEmail: ''
+   }
+   res.send(user)
+});
 
-const app = express()
-app.use(bodyParser.urlencoded({extended: true}))
-app.use(express.static("public"))
-
-app.use(bodyParser.json())
-
-app.post("/", (req, res) => {
-    console.log(req.body)
-
-})
+console.log("Running", "email is ", this.user)
 
 
-//const https = require("https") // need to import the https module
-//const mailchimp = require("@mailchimp/mailchimp_marketing");
-//const {Console} = require("console");
-//const request = require('superagent');
-// const bodyParser = require("body-parser")
-// app.use(express.static("public"));
-// app.use(bodyParser.urlencoded({extended:true}))
-// app.use(bodyParser.json())
-
+// server.use(bodyParser.json())
+// server.post("/", (req, res) => {
+//     console.log(req.body)
+// })
+//
+// fetch("http://localhost:8000", {
+//     method: 'post',
+//     headers: {"Content-Type": "application/json"},
+//     // converting the object to a json file
+//     body: JSON.stringify({
+//      MEmail: 'rmannekejones@deakin.edu.au'
+//     })
+// })
+//     .then(response => response.json())
+//     .then(data => {
+//         console.log(data.message)
+//         alert(data.message)
+//         setSgEmail('')
+//
+//     }).catch(err => {
+//     console.log(err)
+// })
+//
 // // Using the HTML for the form submission
-// app.get("/", (req, res) => {
+// server.get("/", (req, res) => {
 //     res.sendFile(__dirname + "/index.html");
 // });
 //
 // // handling user input
-// app.post('/', function (req, res) {
+// server.post('/', function (req, res) {
 //     // Mail chimp auth tokens
 //     const apiKey = "461ee2459d8fade998a2f8f5891e3f54-us13";
 //     const server = "us13";
 //     const audienceID = "99bff476d8";
-//
 //     request
 //         .post('https://' + server + '.api.mailchimp.com/3.0/lists/' + audienceID + '/members/')
 //         .set('Authorization', 'Basic ' + new Buffer('any:' + apiKey).toString('base64'))
@@ -42,7 +55,6 @@ app.post("/", (req, res) => {
 //         .send({
 //             'email_address': req.body.email,
 //             'status': 'subscribed',
-//
 //         })
 //         .end(function (err, response) {
 //             if (response.status < 300 || (response.status === 400 && response.body.title === "Member Exists")) {
@@ -54,4 +66,4 @@ app.post("/", (req, res) => {
 //         });
 // });
 //
-// //https://www.codementor.io/@mattgoldspink/integrate-mailchimp-with-nodejs-app-du10854xp
+// console.log("function has been successful")

@@ -5,7 +5,7 @@ function Home () {
     return (
         <div className="home">
             <h1>Welcome to Deakin!</h1>
-            <img src={Deakin} alt="Deakin Image"/>
+            <img src={Deakin} alt="Deakin"/>
         </div>
     )
 }

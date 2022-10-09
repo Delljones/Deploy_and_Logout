@@ -5,27 +5,29 @@ import {getAuth, signInWithEmailAndPassword} from "firebase/auth";
 import app from '../../Utils/firebase';
 import './Signup'
 
-function Login() {
+//const cors =require ("cors")
+
+function Login(message) {
     const auth = getAuth(app);
     const [email, getEmail] = useState("")
     const [password, getPassword] = useState("")
     const navigate = useNavigate()
+
     const logins = () => {
         signInWithEmailAndPassword(auth, email, password)
-
             .then((userCredential) => {
                 const user = userCredential.user
                 console.log(user);
-                // Abililty to navigate after the sign in is auth
+                // Ability to navigate after the sign in is auth
                 navigate("/profile")
-
             }).catch((error) => {
             const errorMessage = error.message;
             alert(errorMessage);
-        });
+        })
     }
-    return (
 
+
+    return (
         <div>
             <h1> Log In </h1>
             <div className="form">
@@ -51,7 +53,27 @@ function Login() {
                     <button class="login" onClick={logins}>Log In</button>
                 </div>
             </div>
+            <div className="newsletter">
+                <h1> This Is Our Newsletter </h1>
+                <form>
+                    <label> SIGN UP FOR OUR DAILY INSIDER! <label/> <br></br>
+                        <br></br>
+                        <input type="email"
+                               name='email'
+                               className="Enter_Email"
+                               placeholder="Type your email"
+                        />
+                        <button
+                            type="submit">
+                            Submit
+                        </button>
+                        <br></br>
+                        <h1>Thanks for Signing Up!</h1>
+                    </label>
+                </form>
+            </div>
         </div>
     )
 }
+
 export default Login

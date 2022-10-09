@@ -1,34 +1,25 @@
 // From your Prac you ran
-
 //cd into the new directory to initilise the server
 // npm init-y  - will make a package.json
-
 // then run nodemon server.js (make sure you are CD into the folder)
 // then install express again - npm install express - if you have multiple files you need
 // to keep installing express
-//
 // need to get API key from mail chimp
-
 // server us13 from mailchimp - it is the start of the url
-
 const express = require("express")
 const app = express()
 const bodyParser = require("body-parser")
 const https = require("https") // need to import the https module
-const mailchimp = require("@mailchimp/mailchimp_marketing");
 
 app.use(express.static("public"))
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.get("/", (req, res) => {
-    res.sendFile(__dirname + "/index.html")
+    res.sendFile(__dirname + "")
 });
 
 app.post("/", (req, res) => {
     const apikey = '5c1997b17eab965714be14f9ea6a1a63';
-    const listid = '99bff476d8';
-    const server = '13';
-
     const mEmail = req.body.mEmail;
     const fName = req.body.fname;
     const lName = req.body.lname;
@@ -47,7 +38,8 @@ app.post("/", (req, res) => {
                 status: "subscribed",
                 merge_fields: {
                     fName: fName,
-                    lName: lName
+                    lName: lName,
+                    mEmail: mEmail
                 }
             }]
     }

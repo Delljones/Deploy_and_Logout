@@ -4,7 +4,6 @@ import {useState} from "react";
 import app from '../../Utils/firebase';
 import {getAuth, createUserWithEmailAndPassword} from "firebase/auth";
 function Signup() {
-
     // setting up credentials to login and then popup with an error or success
     const auth = getAuth(app);
     const [email, setEmail] = useState("")

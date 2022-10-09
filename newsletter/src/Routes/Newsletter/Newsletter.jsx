@@ -5,13 +5,8 @@
 // //     "server": "nodemon server.js"
 // // Create two applications side by side
 // //     "dev": "concurrently \"npm run server\" \"npm start\""
-// //
-//
-//
+
 // // Using: npm i react-mailchimp-form
-//
-//
-//
 // import './newsletter.css'
 // // import './server'
 // //import './database'

@@ -20,7 +20,7 @@ function Profile() {
     let email = auth.currentUser.email;
 
     // for future i am setting the display name to handle this
-    let displayName = auth.currentUser.displayName;
+
     // call back function
     useEffect(() => {
         setUser(auth.currentUser)
